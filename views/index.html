@@ -58,39 +58,43 @@
             <section>
                 <p>Please select a burger</p>
                 <p>Please enter some information so that you can order a burger</p>
-                <h2>Enter Customer Information
-                    <p>
-                        <label for="fullname">Full Name</label><br>
-                        <input type="text" id="fullname" name="fn" required="required" placeholder="Full name" />
-                    </p>
-                    <p>
-                        <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
-                    </p>
-                    <p>
-                        <label for="address">Street Address</label><br>
-                        <input type="text" id="address" name="address" required="required" placeholder="Address" />
-                    </p>
-                    <p>
-                        <label for="housenumber">House</label><br>
-                        <input type="text" id="housenumber" name="housenumber"
-                        required="required" placeholder="House Number" />
-                    </p>
-                    <p>
-                        <input type="radio" name="gender" value="Female" id="genderF" /> <label for="genderF">Male</label> <br/>
-                        <input type="radio" name="gender" value="Male" id="genderM" /><label for="genderM">Female</label><br/>
-                        <input type="radio" name="gender" checked="checked"
-                        value="Do not wish to provide" id="genderN" /><label for="genderN">Do
-                        not wish to provide</label><br/>
-                    </p>
+                <h2>
+                    <form>Enter Customer Information
+                        <p>
+                            <label for="fullname">Full Name</label><br>
+                            <input type="text" id="fullname" name="fn" required="required" placeholder="Full name" />
+                        </p>
+                        <p>
+                            <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
+                        </p>
+                        <p>
+                            <label for="address">Street Address</label><br>
+                            <input type="text" id="address" name="address" required="required" placeholder="Address" />
+                        </p>
+                        <p>
+                            <label for="housenumber">House</label><br>
+                            <input type="text" id="housenumber" name="housenumber"
+                                   required="required" placeholder="House Number" />
+                        </p>
+                        <p>
+                            <input type="radio" name="gender" value="Female" id="genderF" /> <label for="genderF">Male</label> <br/>
+                            <input type="radio" name="gender" value="Male" id="genderM" /><label for="genderM">Female</label><br/>
+                            <input type="radio" name="gender" checked="checked"
+                                   value="Do not wish to provide" id="genderN" /><label for="genderN">Do
+                                not wish to provide</label><br/>
+                        </p>
+                        <p>
+                            <label for="paymentmethod">Choose Payment Method</label><br/>
+                            <select id="paymentmethod" name="paymentmethod">
+                                <option>Cash</option>
+                                <option>Liberapay</option>
+                                <option>Bank transaction</option>
+                            </select>
+                        </p>
+                        <button type="submit"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmrayton.files.wordpress.com%2F2012%2F07%2Fred-submit-button-hi.png&f=1&nofb=1" alt="Submit" /></button>
+
+                    </form>
                 </h2>
-                <p>
-                    <label for="paymentmethod">Choose Payment Method</label><br/>
-                    <select id="paymentmethod" name="paymentmethod">
-                        <option>Cash</option>
-                        <option>Liberapay</option>
-                        <option>Bank transaction</option>
-                    </select>
-                </p>
             </section>
         </main>
         <footer>
