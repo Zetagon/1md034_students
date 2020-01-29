@@ -6,7 +6,6 @@ body {
 #burger-selection {
     background-color: #000000;
     color: #ffffff;
-    cursor: url("http://thumb10.shutterstock.com/display_pic_with_logo/247744/105668567/stock-vector-mouse-pointer-105668567.jpg"), pointer;
 
 }
 
@@ -26,7 +25,7 @@ button:hover {
 }
 
 table {
-    width: 180%;
+    width: 100%;
 }
 
 td {
@@ -34,5 +33,6 @@ td {
 }
 
 section {
-    padding: 10%
+    padding: 10%;
+    border: 2px dotted;
 }
