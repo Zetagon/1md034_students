@@ -6,8 +6,18 @@ body {
 #burger-selection {
     background-color: #000000;
     color: #ffffff;
+    cursor: url("http://thumb10.shutterstock.com/display_pic_with_logo/247744/105668567/stock-vector-mouse-pointer-105668567.jpg"), pointer;
+
 }
 
 #contact-information-sec {
+   
+}
 
+.allergy-info {
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: url("https://zulsmktsj2.files.wordpress.com/2011/05/12a34-cur220.gif"), pointer;
 }
