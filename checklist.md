@@ -29,14 +29,14 @@ Create an index.html file which contains:
 	- [X] Street
 	- [X] House Number (only allowing numbers in this field)
 	- [X] Gender (male, female, do not wish to provide as radio buttons)
-- [ ] A button to place the order
+- [X] A button to place the order
 
 ## 03 CSS
 
 - [X] Create style.css and link to it from index.html
 
 Add the following style/behaviour to your website (mostly in style.css but also requiring changes in index.html):
-- [ ] Define a base line font for your site by putting the style rule on "body"
+- [X] Define a base line font for your site by putting the style rule on "body"
 - [ ] Define a larger base line font size
 - [ ] A CSS rule to make the allergy information bold
 - [ ] Define text and background color for one of your two sections (burger selection and customer information)
