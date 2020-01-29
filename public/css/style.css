@@ -21,3 +21,11 @@ body {
 button:hover {
     cursor: url("https://zulsmktsj2.files.wordpress.com/2011/05/12a34-cur220.gif"), pointer;
 }
+
+table {
+    width: 100%;
+}
+
+td {
+    align-self: center;
+}
