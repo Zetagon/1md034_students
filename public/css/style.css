@@ -17,15 +17,22 @@ body {
 .allergy-info {
     font-weight: bold;
 }
+button {
+    marigin: 100%;
+}
 
 button:hover {
     cursor: url("https://zulsmktsj2.files.wordpress.com/2011/05/12a34-cur220.gif"), pointer;
 }
 
 table {
-    width: 100%;
+    width: 180%;
 }
 
 td {
     align-self: center;
+}
+
+section {
+    padding: 10%
 }
