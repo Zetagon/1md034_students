@@ -60,3 +60,22 @@ header img {
     height: auto;
     opacity: 0.6;
 }
+
+.wrapper {
+    display: grid;
+}
+
+.box {
+}
+
+.oreo {
+        grid-column: 2 / span 1;
+}
+
+.mega {
+        grid-column: 3 / span 1;
+}
+
+.ufo {
+        grid-column: 4 / span 1;
+}
