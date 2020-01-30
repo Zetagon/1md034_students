@@ -45,9 +45,18 @@ section {
     width: 80vw;
 }
 
+header {
+    height: 20rem;
+    overflow: hidden;
+    padding: 1em;
+}
+header h1 {
+    position: absolute;
+}
+
 header img {
-    width = 80vw;
-    min-width: 80vw;
-    max-height: 191px;
+    width: 80vw;
+    max-height: 100%;
+    height: auto;
     opacity: 0.6;
 }
