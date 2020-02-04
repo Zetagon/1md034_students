@@ -9,68 +9,23 @@
     <body>
         <main>
             <p>Please select a burger</p>
-            <div id="myID" >
-                <!-- <template v-for="burger in burgers"> -->
-                    <!-- <p>{{burger.name}}</p> -->
-                    <!-- <ol> -->
-                        <!-- <li v-if="burger.containsGluten"> -->
-                        <!-- Contains Gluten -->
-                        <!-- </li> -->
-                        <!-- <li>   <div> -->
-                                <!-- {{burger.kCal}} -->
-                        <!-- </li> -->
-                    <!-- </ol> -->
-                    <!-- </div> -->
-                <!-- </template> -->
-            </div>
             <section id="burger-selection">
                 <header>
                     <h1>Parker Burgers</h1>
                     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.dairyqueen.com%2FGlobal%2FFood%2FBurger_GrillBurger_Qtr-Cheese.jpg%3Fwidth%3D180%26height%3D0&f=1&nofb=1" alt="owee" />
                 </header>
                 <h2>Select burger</h2>
-                <div class="wrapper">
-
-                        <div class="box oreo">
-                            <h3>Burger Oreo</h3>
-                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FV2Uu3G6Awxg%2Fmaxresdefault.jpg&f=1&nofb=1"
-                                 alt="Burger Oreos"
-                                 height="300rem">
-                            <ol>
-                                <li>Artificially Flavoured!</li>
-                                <li>Limited Edition!</li>
-                                <li>Made with ground beef</li>
-                                <li>Only non-glutenfree</li>
-                                <span class="allergy-info"><li>Not for vegetarians</li></span>
-                                <span class="allergy-info"><li>very lactose</li></span>
-                            </ol>
-                        </div>
-                        <div class="box mega">
-                            <h3>Mega Burger</h3>
-                            <img src="http://3.bp.blogspot.com/_uSukkBNulxg/So7HxBI6kEI/AAAAAAAADo0/C8lo6tRh-I8/s400/AmericanBurgerChips.jpg"
-                                 alt="Mega Burgers"
-                                 height="300rem"/>
-                            <ol>
-                                <li>Murican Flavour</li>
-                                <li>Very Large</li>
-                                <li>Crunchy!</li>
-                                <span class="allergy-info"><li>Gluten Free</li></span>
-                                <span class="allergy-info"><li>Vegetarian</li></span>
-                            </ol>
-                        </div>
-
-                        <div class="box ufo">
-                            <h3>UFO</h3>
-                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3fli9w4dgkipni0u2per21bw-wpengine.netdna-ssl.com%2Fwp-content%2Fuploads%2F2016%2F02%2F049-UFO%25E2%2580%2599s-Burger-Flavor-MI-0076-1024x682.jpg&f=1&nofb=1"
-                                 alt="Unidentified flying object"
-                                 height="300rem"/>
-                            <ol>
-                                <li>Unidentifiable!</li>
-                                <li>Unusual Flavour!</li>
-                                <li>??</li>
-                            </ol>
-                        </div>
-
+                <div class="wrapper" id="burger-box">
+                        <template v-for="burger in burgers">
+                            <div class="box col1">
+                                <h3>{{burger.name}}</h3>
+                                <img :src="burger.imagePath" alt=""
+                                     height="300rem">
+                                <ul>
+                                    <span class="allergy-info"><li v-if="burger.containsGluten"> Contains Gluten</li></span>
+                                </ul>
+                            </div>
+                        </template>
                 </div>
             </section>
             <section id="contact-information-sec">
@@ -119,8 +74,8 @@
         <footer>
         </footer>
         <script src="http://localhost:8080/skewer"></script>
-        <script src="https://vuejs.org/js/vue.js"></script>
+        <script src="vue/vue.js"></script>
         <script src="js/js_script.js"></script>
-        <script src="vue_script.js"></script>
+        <script src="js/vue_script.js"></script>
     </body>
 </html>

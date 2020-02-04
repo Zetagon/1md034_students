@@ -16,8 +16,8 @@ html {
    
 }
 
-table img {
-    max-width: 33vh;
+.wrapper img {
+    max-width: 100%;
 }
 
 .allergy-info {
@@ -31,9 +31,6 @@ button:hover {
     cursor: url("https://zulsmktsj2.files.wordpress.com/2011/05/12a34-cur220.gif"), pointer;
 }
 
-table {
-    width: 80vw;
-}
 
 td {
     align-self: center;
@@ -62,6 +59,9 @@ header img {
 
 .wrapper {
     display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-auto-flow: row;
+    width: 100%;
 }
 
 .box {
