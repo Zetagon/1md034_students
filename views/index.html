@@ -19,7 +19,7 @@
                         <template v-for="burger in burgers">
                             <div class="box col1">
                                 <h3>{{burger.name}}</h3>
-                                <img :src="burger.imagePath" alt=""
+                                <img :src="burger.img" alt=""
                                      height="300rem">
                                 <ul>
                                     <span class="allergy-info"><li v-if="burger.containsGluten"> Contains Gluten</li></span>
@@ -75,6 +75,7 @@
         </footer>
         <script src="http://localhost:8080/skewer"></script>
         <script src="vue/vue.js"></script>
+        <script src="js/menu.js"></script>
         <script src="js/js_script.js"></script>
         <script src="js/vue_script.js"></script>
     </body>
