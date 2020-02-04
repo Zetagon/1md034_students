@@ -14,13 +14,16 @@ let burgers = [
     new MenuItem("Billys Burger", 1600, true, "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.3B6KmscisZG3XU63ltbKMwHaEy%26pid%3DApi&f=1"),
     new MenuItem("Doritos Burger", 6000, false, "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.choosy-beggars.com%2Fwp-content%2Fuploads%2F2010%2F07%2FDoritos-All-Nighter-Cheeseburger.gif&f=1&nofb=1")
 ]
-// let myId = document.getElementById("myID");
+let myId = document.getElementById("myID");
 
 
-// let myID = document.getElementById("myID");
-// for (let i = 0; i < burgers.length; ++i) {
-//     let p = document.createElement('p');
-//     let txt = document.createTextNode(burgers[i].nameKCal());
-//     p.appendChild(txt);
-//     myID.appendChild(p);
-// }
+let myID = document.getElementById("burger-box");
+for (let i = 0; i < burgers.length; ++i) {
+    let div = document.createElement('div');
+    let img = document.createElement('img')
+    img.src = burgers[i].imagePath;
+    let txt = document.createTextNode(burgers[i].nameKCal());
+    div.appendChild(txt);
+    div.appendChild(img)
+    myID.appendChild(div);
+}

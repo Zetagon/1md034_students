@@ -1,7 +1,7 @@
 
-const mv = new Vue({
-    el: "#burger-box",
-    data: {
-        burgers: burgers
-    }
-})
+// const mv = new Vue({
+//     el: "#burger-box",
+//     data: {
+//         burgers: burgers
+//     }
+// })
