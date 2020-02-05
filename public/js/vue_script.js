@@ -10,6 +10,7 @@ const mv = new Vue({
         gender:"",
         paymentmethod:"Cash",
         submitted:false,
+        orderedBurgers: [],
         submit: function() {
             this.submitted = true;
             console.log ( [

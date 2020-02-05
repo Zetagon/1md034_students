@@ -18,7 +18,12 @@
                 <div class="wrapper" id="burger-box">
                         <template v-for="burger in burgers">
                             <div class="box col1">
-                                <h3>{{burger.name}}</h3>
+
+                                <h3><input type="checkbox"
+                                           name="burger"
+                                           :value="burger.name"
+                                           v-model="orderedBurgers"
+                                           :id="burger.name"><label :for="burger.name">{{burger.name}}</label></h3>
                                 <img :src="burger.img" alt=""
                                      height="300rem">
                                 <ul>
@@ -71,6 +76,12 @@
                                  height="50rem"/>
                         </button>
                         <div v-if="submitted">
+                            Ordered Burgers:
+
+                            <ul v-for="burgerName in
+                                                          orderedBurgers">
+                                <li>{{burgerName}}</li>
+                            </ul>
                             Fullname {{fullname}}<br>
                             Email {{email}}<br>
                             Housenumber {{housenumber}}<br>
