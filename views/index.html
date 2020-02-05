@@ -34,42 +34,51 @@
                     <form>Enter Customer Information
                         <p>
                             <label for="fullname">Full Name</label><br>
-                            <input v-model:"fullname" type="text" id="fullname" name="fn" required="required" placeholder="Full name" />
+                            <input v-model="fullname" type="text" id="fullname" name="fn" required="required" placeholder="Full name" />
                         </p>
                         <p>
-                            <input v-model:"email" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
+                            <input v-model="email" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
                         </p>
                         <p>
                             <label for="address">Street Address</label><br>
-                            <input v-model:"address" type="text" id="address" name="address" required="required" placeholder="Address" />
+                            <input v-model="address" type="text" id="address" name="address" required="required" placeholder="Address" />
                         </p>
                         <p>
                             <label for="housenumber">House</label><br>
-                            <input v-model:"housenumber" type="text" id="housenumber" name="housenumber"
+                            <input v-model="housenumber" type="text" id="housenumber" name="housenumber"
                                    required="required" placeholder="House Number" />
                         </p>
                         <p>
-                            <input v-model:"gender" type="radio" name="gender" value="Female" id="genderF" /> <label for="genderF">Female</label> <br/>
-                            <input v-model:"gender" type="radio" name="gender" value="Male" id="genderM" /><label for="genderM">Male</label><br/>
-                            <input v-model:"gender" type="radio" name="gender" checked="checked"
+                            <input v-model="gender" type="radio" name="gender" value="Female" id="genderF" /><label for="genderF">Female</label> <br/>
+                            <input v-model="gender" type="radio" name="gender" value="Male" id="genderM" /><label for="genderM">Male</label><br/>
+                            <input v-model="gender" type="radio" name="gender" checked="checked"
                                    value="Do not wish to provide" id="genderN" /><label for="genderN">Do
                                 not wish to provide</label><br/>
                         </p>
                         <p>
                             <label for="paymentmethod">Choose Payment Method</label><br/>
-                            <select id="paymentmethod" name="paymentmethod">
+                            <select id="paymentmethod" name="paymentmethod" value="---">
                                 <option>Cash</option>
                                 <option>Liberapay</option>
                                 <option>Bank transaction</option>
                             </select>
                         </p>
-                        <button type="submit" id="submit-button">
+                    </form>
+                        <button  id="submit-button">
                             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmrayton.files.wordpress.com%2F2012%2F07%2Fred-submit-button-hi.png&f=1&nofb=1"
                                  alt="Submit"
                                  v-on:click="submit()"
-                                 height="50rem"/></button>
+                                 height="50rem"/>
+                        </button>
+                        <div v-if="submitted">
+                            Fullname {{fullname}}<br>
+                            Email {{email}}<br>
+                            Housenumber {{housenumber}}<br>
+                            Gender {{gender}}<br>
+                            Paymentmethod {{paymentmethod}}<br>
+                        </div>
 
-                    </form>
+
                 </h2>
             </section>
         </main>
