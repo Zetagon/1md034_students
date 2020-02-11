@@ -6,7 +6,7 @@ const socket = io();
 
 /* eslint-disable-next-line no-unused-vars */
 const vm = new Vue({
-  el: '#dots',
+  el: '#vue',
   data: {
     orders: {},
   },
@@ -46,6 +46,7 @@ const vm = new Vue({
         x: event.currentTarget.getBoundingClientRect().left,
         y: event.currentTarget.getBoundingClientRect().top,
       };
+      console.log(offset);
       socket.emit('addOrder', {
         orderId: this.getNext(),
         details: {

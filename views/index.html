@@ -4,16 +4,17 @@
     <head>
         <title>Parker Burgers</title>
         <meta charset="utf-8"/>
+        <link rel="stylesheet" href="css/deli-very.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
+        <p>Please select a burger</p>
+        <section id="burger-selection">
+            <header>
+                <h1>Parker Burgers</h1>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.dairyqueen.com%2FGlobal%2FFood%2FBurger_GrillBurger_Qtr-Cheese.jpg%3Fwidth%3D180%26height%3D0&f=1&nofb=1" alt="owee" />
+            </header>
         <main id="vue">
-            <p>Please select a burger</p>
-            <section id="burger-selection">
-                <header>
-                    <h1>Parker Burgers</h1>
-                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.dairyqueen.com%2FGlobal%2FFood%2FBurger_GrillBurger_Qtr-Cheese.jpg%3Fwidth%3D180%26height%3D0&f=1&nofb=1" alt="owee" />
-                </header>
                 <h2>Select burger</h2>
                 <div class="wrapper" id="burger-box">
                         <template v-for="burger in burgers">
@@ -45,15 +46,6 @@
                             <input v-model="email" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
                         </p>
                         <p>
-                            <label for="address">Street Address</label><br>
-                            <input v-model="address" type="text" id="address" name="address" required="required" placeholder="Address" />
-                        </p>
-                        <p>
-                            <label for="housenumber">House</label><br>
-                            <input v-model="housenumber" type="text" id="housenumber" name="housenumber"
-                                   required="required" placeholder="House Number" />
-                        </p>
-                        <p>
                             <input v-model="gender" type="radio" name="gender" value="Female" id="genderF" /><label for="genderF">Female</label> <br/>
                             <input v-model="gender" type="radio" name="gender" value="Male" id="genderM" /><label for="genderM">Male</label><br/>
                             <input v-model="gender" type="radio" name="gender" checked="checked"
@@ -68,13 +60,27 @@
                                 <option>Bank transaction</option>
                             </select>
                         </p>
-                    </form>
+                        <p>
+                            <h1> Click in the map! </h1>
+                            <a href="/dispatcher" target="_blank">Open dispatcher in new window</a>.
+                            <div class="view-box">
+                                <div id="dots" v-on:click="addOrder">
+                                    <div
+                                        v-for="(order, key) in orders"
+                                        v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                                        {{key}}
+                                    </div>
+                                </div>
+                            </div>
+                        </p>
                         <button  id="submit-button">
                             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmrayton.files.wordpress.com%2F2012%2F07%2Fred-submit-button-hi.png&f=1&nofb=1"
                                  alt="Submit"
                                  v-on:click="submit()"
                                  height="50rem"/>
                         </button>
+                    </form>
+
                         <div v-if="submitted">
                             Ordered Burgers:
 
@@ -95,6 +101,7 @@
         </main>
         <footer>
         </footer>
+        <script src="/socket.io/socket.io.js"></script>
         <script src="http://localhost:8080/skewer"></script>
         <script src="vue/vue.js"></script>
         <script src="js/menu.js"></script>
