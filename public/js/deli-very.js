@@ -6,7 +6,7 @@ const socket = io();
 
 /* eslint-disable-next-line no-unused-vars */
 const vm = new Vue({
-  el: '#vue',
+  el: '#dots',
   data: {
     orders: {},
   },
