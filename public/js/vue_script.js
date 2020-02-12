@@ -4,25 +4,27 @@ const socket = io();
 
 const mv = new Vue({
     el: "#vue",
-    data: {
-        created: function() {
-            /* When the page is loaded, get the current orders stored on the server.
-             * (the server's code is in app.js) */
-            socket.on('initialize', function(data) {
-                this.orders = data.orders;
-                console.log('initiailze')
-            }.bind(this));
+    created: function() {
+        console.log("Initialized Vue!")
+        /* When the page is loaded, get the current orders stored on the server.
+         * (the server's code is in app.js) */
+        socket.on('initialize', function(data) {
+            this.orders = data.orders;
+            console.log('initiailze')
+        }.bind(this));
 
-            /* Whenever an addOrder is emitted by a client (every open map.html is
-             * a client), the server responds with a currentQueue message (this is
-             * defined in app.js). The message's data payload is the entire updated
-             * order object. Here we define what the client should do with it.
-             * Spoiler: We replace the current local order object with the new one. */
-            socket.on('currentQueue', function(data) {
-                this.orders = data.orders;
-                console.log('currentQueue')
-            }.bind(this));
-        },
+        /* Whenever an addOrder is emitted by a client (every open map.html is
+         * a client), the server responds with a currentQueue message (this is
+         * defined in app.js). The message's data payload is the entire updated
+         * order object. Here we define what the client should do with it.
+         * Spoiler: We replace the current local order object with the new one. */
+        socket.on('currentQueue', function(data) {
+            this.orders = data.orders;
+            console.log('currentQueue')
+        }.bind(this));
+    },
+    data: {
+
         orders: {},
         burgers: burgers,
         fullname:"",
@@ -35,7 +37,7 @@ const mv = new Vue({
         orderedBurgers: [],
         submit: function() {
             this.submitted = true;
-            console.log ( [
+            console.log ("submit: " + [
                 this.fullname, this.gender, this.paymentmethod
             ] )
         }
@@ -61,7 +63,7 @@ const mv = new Vue({
                 x: event.currentTarget.getBoundingClientRect().left,
                 y: event.currentTarget.getBoundingClientRect().top,
             };
-            console.log(offset)
+            console.log("addOrder: " + offset)
             socket.emit('addOrder', {
                 orderId: this.getNext(),
                 details: {
@@ -71,5 +73,5 @@ const mv = new Vue({
                 orderItems: ['Beans', 'Curry'],
             });
         },
-  },
+    },
 })
