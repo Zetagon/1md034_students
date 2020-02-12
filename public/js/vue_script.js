@@ -54,6 +54,14 @@ const mv = new Vue({
                 orderId: this.getNext(),
                 details: this.position,
                 orderItems: this.orderedBurgers,
+                personalInformation: [
+                    this.fullname,
+                    this.email,
+                    this.address,
+                    this.housenumber,
+                    this.gender,
+                    this.paymentmethod,
+                ]
             });
         },
     },
